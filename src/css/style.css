@@ -1,0 +1,217 @@
+html{
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    background: radial-gradient(circle, #cccccc 0%, #9b9b9b 100%);
+    color: #333333;
+    --border-Color: #333;
+    --color-Red-Btn: red;
+    --color-Blue-Btn: blue;
+    --hover-card: rgb(245, 197, 245);
+}
+
+
+body.dark-mode{
+    background: radial-gradient(circle, #666 0%, #111 100%);
+    color: #f5f5f5;
+    --border-Color: #eee;
+    --color-Red-Btn: rgb(255, 0, 0);
+    --color-Blue-Btn: rgb(55, 55, 255);
+    --hover-card: rgb(54, 10, 54);
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+header .logo,
+header .btn-img{
+    width: 50px;
+    transition: .25s linear;
+    cursor: pointer;
+}
+
+header .logo:hover,
+header .btn-img:hover{
+    transform: scale(1.2);
+}
+
+
+#toggle-theme{
+    background: none;
+    border: none;
+}
+
+
+main{    
+    padding: 120px 100px;
+}
+
+main .pokemon-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+main .pokemon-card{
+    background-color: #d8e3ec;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: .6s ease-in-out;
+    border-radius: 20px;
+}
+
+
+main .pokemon-card:hover{
+    background-color: var(--hover-card);
+    transform: scale(1.05);
+}
+
+
+.dark-mode .pokemon-card{
+    background-color: #222;
+}
+
+main .pokemon-card .info{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--border-Color);
+    border-radius: 10px;
+}
+
+main .pokemon-card .info span{
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+main .pokemon-card .gif{
+    width: 90px;
+    height: 90px;
+}
+
+
+main .pokemon-card .types{
+    display: flex;
+    gap: 15px;
+}
+
+
+main .pokemon-card .type{
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+
+.grass{
+    background-color: #78c850;
+}
+
+.poison{
+    background-color: #a040a0;
+}
+
+.fire{
+    background-color:#f08030;
+}
+
+.flying{
+    background-color: #a890f0;
+}
+
+.water{
+    background-color: #6890f0;
+}
+
+
+.bug{
+    background-color: #a8b820;
+}
+
+.vers-btn-container{
+    display: flex;
+    gap: 20px
+}
+
+
+.vers-btn{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.redVersion{
+    outline: 2px solid var(--color-Red-Btn);
+    outline-offset: 3px;
+}
+
+.blueVersion{
+    outline: 2px solid var(--color-Blue-Btn);
+    outline-offset: 3px;
+}
+
+.redVersion.selected{
+    background-color: var(--color-Red-Btn);
+}
+
+.blueVersion.selected{
+    background-color: var(--color-Blue-Btn);
+}
+
+.description{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    max-height: 80px;
+    display: none;
+    overflow-y: scroll;
+    padding-right: 10px;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    font-weight: 300;
+}
+
+.description.active{
+    display: block;
+    opacity: 1;
+}
+
+
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #582965;
+	border-radius: 10px;
+	border: 2px solid #ffffff;
+}
+
+
+
+
+
+
